@@ -74,7 +74,8 @@ int main() {
 ```
 ## OUTPUT:
 
-![image](https://github.com/user-attachments/assets/1820c585-9caf-4ad8-bb4f-cbc2fa0d3412)
+![Screenshot 2024-10-17 092205](https://github.com/user-attachments/assets/484a0dfd-3b89-4515-9ea5-9f434855d082)
+
 
 ## RESULT:
 The program for the Diffie-Hellman algorithm is executed successfully, and Alice and Bob have securely derived a shared secret key.
