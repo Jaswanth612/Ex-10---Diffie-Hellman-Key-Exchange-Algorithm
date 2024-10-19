@@ -43,28 +43,28 @@ int main() {
     
     // Private keys (chosen secretly by Alice and Bob)
     int a, b;
-    printf("Enter Siva private key: ");
+    printf("Enter JAS private key: ");
     scanf("%d", &a);
-    printf("Enter Karthi private key: ");
+    printf("Enter JASS private key: ");
     scanf("%d", &b);
     
     // Public keys (computed from private keys)
     int A = modExp(g, a, p);  // Alice's public key
     int B = modExp(g, b, p);  // Bob's public key
     
-    printf("Siva Public Key: %d\n", A);
-    printf("Karthi Public Key: %d\n", B);
+    printf("JAS Public Key: %d\n", A);
+    printf("JASS Public Key: %d\n", B);
     
     // Shared secret keys (computed from the other's public key and own private key)
-    int sharedKeySiva = modExp(B, a, p);  // Alice computes the shared secret key
-    int sharedKeyKarthi = modExp(A, b, p);    // Bob computes the shared secret key
+    int sharedKeyjas = modExp(B, a, p);  // Alice computes the shared secret key
+    int sharedKeyjass = modExp(A, b, p);    // Bob computes the shared secret key
     
-    printf("Shared Secret Key (Siav): %d\n", sharedKeySiva);
-    printf("Shared Secret Key (Karthi): %d\n", sharedKeyKarthi);
+    printf("Shared Secret Key (JAS): %d\n", sharedKeyjas);
+    printf("Shared Secret Key (JASS): %d\n", sharedKeyjass);
     
     // The shared keys should be the same
-    if (sharedKeySiva == sharedKeyKarthi) {
-        printf("Key Exchange Successful! Shared Secret Key: %d\n", sharedKeySiva);
+    if (sharedKeyjas == sharedKeyjass) {
+        printf("Key Exchange Successful! Shared Secret Key: %d\n", sharedKeyjas);
     } else {
         printf("Key Exchange Failed!\n");
     }
